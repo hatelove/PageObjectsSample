@@ -52,6 +52,7 @@ namespace PageObjectsWithLogin.Tests.Spec.Steps
         public void ThenItShouldBeRedirectToWelcomePage()
         {
             this._welcomePage = new WelcomePage(this);
+            this._welcomePage.CheckAt();
         }
 
         [Then(@"it should be displayed ""(.*)"" on the screen")]
