@@ -9,6 +9,9 @@ namespace PageObjectsWithLogin.Tests.PageObjects
 {
     public class LoginPage : PageObject<LoginPage>
     {
+        private const string AccountContainer = "#account";
+        private const string PasswordContainer = "#password";
+
         public LoginPage(FluentTest test)
             : base(test)
         {
@@ -17,17 +20,17 @@ namespace PageObjectsWithLogin.Tests.PageObjects
 
         internal void Account(string account)
         {
-            throw new NotImplementedException();
+            I.Enter(account).In(AccountContainer);
         }
 
         internal void Password(string password)
         {
-            throw new NotImplementedException();
+            I.Enter(password).In(PasswordContainer);
         }
 
         internal void Login()
         {
-            throw new NotImplementedException();
+            I.Press("{ENTER}");
         }
     }
 }
