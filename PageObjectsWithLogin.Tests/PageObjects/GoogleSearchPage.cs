@@ -2,21 +2,23 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace PageObjectsWithLogin.Tests.PageObjects
 {
     public class GoogleSearchPage : PageObject<GoogleSearchPage>
     {
+        private const string SearchTextContainer = "#lst-ib";
+
         public GoogleSearchPage(FluentTest test)
             : base(test)
         {
-            Url = "http://https://www.google.com";
+            Url = "https://www.google.com";
         }
 
         internal void Search(string keywords)
         {
-            throw new NotImplementedException();
+            I.Enter(keywords).In(SearchTextContainer);
+            I.Press("{ENTER}");
         }
     }
 }
