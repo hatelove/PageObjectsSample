@@ -10,3 +10,10 @@ Scenario: Login Success
 	When I Login
 	Then it should be redirect to Welcome Page
 	And it should be displayed "welcome, joeychen" on the screen
+
+	Scenario: Login Failed
+	Given I go to Login Page
+	And I Enter my account "joeychen"
+	And I Enter my password "abc"
+	When I Login
+	Then it should show error message "wrong account or password" on the screen	

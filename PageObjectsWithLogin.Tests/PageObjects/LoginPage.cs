@@ -11,6 +11,7 @@ namespace PageObjectsWithLogin.Tests.PageObjects
     {
         private const string AccountContainer = "#account";
         private const string PasswordContainer = "#password";
+        private const string ErrorMessageContainer = "#errorMessage";
 
         public LoginPage(FluentTest test)
             : base(test)
@@ -31,6 +32,11 @@ namespace PageObjectsWithLogin.Tests.PageObjects
         internal void Login()
         {
             I.Press("{ENTER}");
+        }
+
+        internal void ShowMessage(string errorMessage)
+        {
+            I.Assert.Text(errorMessage).In(ErrorMessageContainer);
         }
     }
 }
