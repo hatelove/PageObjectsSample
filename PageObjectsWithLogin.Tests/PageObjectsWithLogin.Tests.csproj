@@ -76,13 +76,22 @@
   <ItemGroup>
     <Compile Include="PageObjects\GoogleSearchPage.cs" />
     <Compile Include="PageObjects\GoogleSearchResultsPage.cs" />
+    <Compile Include="PageObjects\LoginPage.cs" />
+    <Compile Include="PageObjects\WelcomePage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Spec\GoogleSearch.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>GoogleSearch.feature</DependentUpon>
     </Compile>
+    <Compile Include="Spec\Login.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Login.feature</DependentUpon>
+    </Compile>
     <Compile Include="Spec\Steps\GoogleSearchSteps.cs" />
+    <Compile Include="Spec\Steps\LoginSteps.cs" />
+    <Compile Include="Util\MyTestContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -90,6 +99,10 @@
     <None Include="Spec\GoogleSearch.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>GoogleSearch.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Spec\Login.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Login.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <Choose>
