@@ -15,6 +15,10 @@
             <li>
                 密碼：@Html.Password("password")
             </li>
+            @if (ViewBag.Message != null)
+            {
+                <div id="errorMessage" style="color: red">@ViewBag.Message </div>
+            }
         </ol>
         <input type="submit" value="登入" />
     </fieldset>

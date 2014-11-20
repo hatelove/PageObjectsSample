@@ -19,12 +19,15 @@ namespace MyWeb.Controllers
         [HttpPost]
         public ActionResult Index(string account, string password)
         {
-            if (account=="joeychen" && password=="1234")
+            if (account == "joeychen" && password == "1234")
             {
                 return RedirectToAction("Index", "Welcome");
             }
-
-            return View();
+            else
+            {
+                ViewBag.Message = "wrong account or password";
+                return View();
+            }            
         }
     }
 }
