@@ -16,5 +16,15 @@ namespace MyWeb.Controllers
             return View();
         }
 
+        [HttpPost]
+        public ActionResult Index(string account, string password)
+        {
+            if (account=="joeychen" && password=="1234")
+            {
+                return RedirectToAction("Index", "Welcome");
+            }
+
+            return View();
+        }
     }
 }
